@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Register Member</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+
+</head>
+
+<body>
+	<h2 align="center">update Member</h2>
+	<form th:action="@{/addMember}" th:object="${member}" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" th:field="*{name}" /><br />
+
+		<label for="memberId">Member ID:</label>
+		<input type="text" id="memberId" th:field="*{memberId}" /><br />
+
+		<input type="hidden" id="id" th:field="*{id}" /> <br />
+		<button type="submit">Update</button>
+		<a href="/books">Home</a>
+	</form>
+</body>
+
+</html>
