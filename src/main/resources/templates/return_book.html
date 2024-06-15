@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2 align="center">Return a Book</h2>
-<form th:action="@{/return}" method="post">
+<form th:action="@{/return/book}" method="post">
     <label for="borrower">Select Borrower ID:</label>
     <select id="borrower" name="borrowingId">
         <option th:each="borrower : ${borrowers}"

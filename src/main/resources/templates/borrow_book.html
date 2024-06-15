@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2 align="center">Borrow a Book</h2>
-<form th:action="@{/borrow}" method="post">
+<form th:action="@{/borrow/book}" method="post">
     <label for="member">Select Member:</label>
     <select id="member" name="memberId">
         <option th:each="member : ${members}"
@@ -22,7 +22,7 @@
     </select><br/>
 
     <button type="submit">Borrow</button>
-    <a href="/lms">Home</a>
+    <a href="/books">Home</a>
 </form>
 </body>
 </html>
